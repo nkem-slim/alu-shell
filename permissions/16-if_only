@@ -1,2 +1,2 @@
 #!/bin/bash
-11;rgb:0000/0000/0000chown --from=guillaume vincent hello
+chown --from=guillaume vincent hello
