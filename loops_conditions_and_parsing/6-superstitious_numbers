@@ -1,21 +1,22 @@
 #!/usr/bin/env bash
 # The script below will run a while loop 20 times and a check with switch for several conditions and display a text in their position
-i=0
-while (( i <= 20 ))
-do
-	case i in
-	  4)
-		echo "4 - Bad luck from China"
-		;;
-	  9)
-		echo "9 - Bad luck from Japan"
-		;;
-	  17)
-		echo "17 - Bad luck from Italy"
-		;;
-	  *)
-		echo i
-		;;
-	  esac
-	  (( i++ ))
+
+counter=1
+
+while [ $counter -le 20 ]; do
+    case $counter in
+        4)
+            echo "4 - Bad luck from China"
+            ;;
+        9)
+            echo "9 - Bad luck from Japan"
+            ;;
+        17)
+            echo "17 - Bad luck from Italy"
+            ;;
+        *)
+            echo $counter
+            ;;
+    esac
+    ((counter++))
 done
