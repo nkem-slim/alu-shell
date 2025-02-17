@@ -1,2 +1,2 @@
 #!/bin/bash
-ls ./ | wc -l | +1
+find "$PATH" -maxdepth 1 -type d | wc -l
