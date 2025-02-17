@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # The script below is to print 'Best School' 10 times using unti...loop
-i=10
-until (( i=0 ))
+i=0
+until [ $i -eq 10 ]
 do
 	echo "Best School"
-	((i--))
+	((i++))
 done
