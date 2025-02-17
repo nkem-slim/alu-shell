@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# The script below uses a for loop to manipualte how files in a folder is displayed when listed
+
+for file in *; do
+    if [[ -f "$file" && ! -L "$file" ]]; then
+        echo "${file#*-}"
+    fi
+done
+
