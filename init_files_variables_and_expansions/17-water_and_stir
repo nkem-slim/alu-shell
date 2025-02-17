@@ -1,2 +1,2 @@
 #!/bin/bash
-sum=$((WATER + STIR)) echo $sum
+echo $(( $(echo $WATER | tr 'water' '01234') + $(echo $STIR | tr 'stir' '01234') ))
