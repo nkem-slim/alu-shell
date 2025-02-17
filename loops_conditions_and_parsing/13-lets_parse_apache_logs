@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# The script below will be used to log site error complained by user. And I'd make use of awk as well
+
+awk '{print $1, $9}' apache-access.log
