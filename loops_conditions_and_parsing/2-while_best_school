@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# The purpose of the script below is to use a while loop to print 'Best School' 10 times
 while (( i<=10 ))
 do
 	echo "Best School"
