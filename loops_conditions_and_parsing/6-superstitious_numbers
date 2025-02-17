@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# The script below will run a while loop 20 times and a check with switch for several conditions and display a text in their position
 i=0
 while (( i <= 20 ))
 do
