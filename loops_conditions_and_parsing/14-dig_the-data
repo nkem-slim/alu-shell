@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # The script below will help me group visitors by IP and HTTP status code, and display the data using awk and no loops
 
-awk '{print $1, $9}' apache-access.log | sort | uniq -c | awk '{print $2, $3}'
+awk -F' ' '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -nr
