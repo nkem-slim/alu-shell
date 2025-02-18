@@ -1,0 +1,4 @@
+#1/usr/bin/env bash
+# The script below will be used to kill the previously running process
+
+pgrep -f 4-to_infinity_and_beyond | xargs kill
