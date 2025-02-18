@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# The script below will log an infite text with a word that will come inbetween
+
+while (( true )) 
+do
+	echo "To infinity and beyond"
+	sleep 2
+done 
