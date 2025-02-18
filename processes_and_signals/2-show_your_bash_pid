@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# The command below will display the firs three running processes with extra conditions
+
+ps auxf | grep bash
