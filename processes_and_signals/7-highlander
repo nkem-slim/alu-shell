@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# The script below will log 'To ifinity and beyond' indefinitely with a 'sleep 2' after each iteration and another string when SIGTERM is recieved
+
+while true
+do 
+    echo "To infinity and beyond"
+    sleep 2
+    trap echo "I am invincible!!!" SIGTERM
+done
