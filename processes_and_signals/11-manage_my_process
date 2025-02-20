@@ -1,23 +1,24 @@
 #!/usr/bin/env bash
 # This script manages the lifecycle of the manage_my_process script. It provides functions to start, stop, and restart the process, and stores the process ID in a PID file for tracking.
 
-
 PID_FILE="/var/run/my_process.pid"
 
 start_process() {
+	while true
+	do
+    	echo "I am alive!" >> /tmp/my_process
+    	sleep 2
+	done &
+    echo "$!" > "$PID_FILE"
     echo "manage_my_process started"
-    echo $$ > "$PID_FILE"
-    # Add your process starting logic here
 }
 
 stop_process() {
     if [ -f "$PID_FILE" ]; then
-        PID=$(cat "$PID_FILE")
-        kill "$PID"
-        rm -f "$PID_FILE"
+        pid=$(cat "$PID_FILE")
+        kill "$pid"
+        rm "$PID_FILE"
         echo "manage_my_process stopped"
-    else
-        echo "manage_my_process is not running"
     fi
 }
 
