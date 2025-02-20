@@ -9,7 +9,7 @@ start_process() {
     echo "Starting manage_my_process..."
     nohup $SCRIPT > /dev/null 2>&1 &
     echo $! > $PIDFILE
-    echo "manage_my_process started"
+    echo "manage_my_process started with PID $(cat $PIDFILE)"
 }
 
 # Function to stop the process
@@ -18,8 +18,12 @@ stop_process() {
         PID=$(cat $PIDFILE)
         echo "Stopping manage_my_process (PID: $PID)..."
         kill $PID
-        rm -f $PIDFILE
-        echo "manage_my_process stopped"
+        if [ $? -eq 0 ]; then
+            rm -f $PIDFILE
+            echo "manage_my_process stopped and PID file removed"
+        else
+            echo "Failed to stop manage_my_process"
+        fi
     else
         echo "manage_my_process is not running"
     fi
@@ -48,4 +52,3 @@ case $1 in
         exit 1
         ;;
 esac
-
