@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script manages the lifecycle of the manage_my_process script. It provides functions to start, stop, and restart the process, and stores the process ID in a PID file for tracking.
 
 # Path to the manage_my_process script
 SCRIPT="/path/to/manage_my_process"
